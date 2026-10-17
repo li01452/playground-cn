@@ -1,7 +1,7 @@
 {
   "name": "deep-playground-prototype",
   "version": "2016.3.10",
-  "description": "",
+  "description": "面向零基础读者的神经网络交互实验：中文界面、入门步骤和对照实验",
   "private": true,
   "scripts": {
     "clean": "rimraf dist",
@@ -13,10 +13,11 @@
     "watch-html": "concat index.html -o dist/index.html",
     "build-js": "browserify src/playground.ts -p [tsify] | uglifyjs -c > dist/bundle.js",
     "watch-js": "watchify src/playground.ts -p [tsify] -v --debug -o dist/bundle.js",
-    "build": "npm run prep && npm run build-js && npm run build-css && npm run build-html",
+    "build": "npm run typecheck && npm run prep && npm run build-js && npm run build-css && npm run build-html",
     "watch": "npm run prep && concurrently \"npm run watch-js\" \"npm run watch-css\" \"npm run watch-html\"",
     "serve": "npx serve dist/",
-    "serve-watch": "concurrently \"npx serve dist/\" \"npm run watch\""
+    "serve-watch": "concurrently \"npx serve dist/\" \"npm run watch\"",
+    "typecheck": "tsc --noEmit"
   },
   "devDependencies": {
     "@types/d3": "^3.5.34",

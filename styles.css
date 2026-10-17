@@ -331,10 +331,9 @@ header h1 .optional {
 }
 
 #top-controls .control .select::after {
-  class: "material-icons";
-  content: "arrow_drop_down";
+  content: "▾";
   color: #999;
-  font-family: 'Material Icons';
+  font-family: Arial, sans-serif;
   font-weight: normal;
   font-style: normal;
   font-size: 18px;
@@ -992,3 +991,50 @@ footer .links a:hover {
 #main-part .mdl-slider.is-upgraded:focus:not(:active)::-webkit-slider-thumb {
   box-shadow: 0 0 0 10px rgba(0,0,0, 0.12);
 }
+
+/* Chinese edition: readable explanations and self-contained controls. */
+body, h1, h2, h3, h4, button, input, select, .mdl-button, .mdl-checkbox__label {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+}
+.material-icons {
+  font-family: Arial, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  letter-spacing: normal;
+  display: inline-block;
+}
+.quick-start {
+  box-sizing: border-box;
+  padding: 22px 28px;
+  margin-top: 24px;
+  margin-bottom: 24px;
+  background: #eaf3f7;
+  border-left: 4px solid #0877bd;
+  border-radius: 4px;
+  color: #244452;
+  font-size: 15px;
+  line-height: 1.8;
+}
+.quick-start ol { margin: 8px 0; padding-left: 24px; }
+.quick-start p { margin: 8px 0 0; font-size: 14px; }
+.quick-start a { color: #0d658c; }
+#top-controls .control label, #top-controls .control .label { white-space: nowrap; }
+.hidden-layers #layers-label { width: auto; white-space: nowrap; }
+.features.column .callout { font-style: normal; }
+#hovercard { min-width: 180px; }
+#article-text .l--body { width: 680px; max-width: calc(100% - 48px); }
+#article-text h2 { margin: 48px 0 18px; }
+#article-text .l--body > h2:first-child { margin-top: 0; }
+#article-text p, #article-text li, #article-text dd {
+  font-size: 16px;
+  line-height: 1.9;
+  color: #444;
+}
+#article-text li { margin-bottom: 14px; }
+#article-text ol { padding-left: 24px; }
+#article-text dt { font-size: 16px; font-weight: 600; margin-top: 18px; }
+#article-text dd { margin: 6px 0 0; }
+#article-text .hide-controls { line-height: 1.6; }
+#article-text .hide-controls label { width: 165px; }
+#beginner-guide { scroll-margin-top: 24px; }
